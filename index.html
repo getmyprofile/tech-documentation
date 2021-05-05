@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap" rel="stylesheet">
+    <title>Technical Documentation Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #brand {
+            text-align: center;
+            padding: 1%;
+        }
+
+        #logo {
+            width: 40px;
+            height: auto;
+            margin-top: 1%;
+            margin-bottom: 0;
+        }
+
+        #main-doc {
+            text-align: left;
+            background-color: white;
+            font-family: serif;
+            font-size: 18px;
+        }
+
+        #navbar {
+            display: grid;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            color: teal;
+        }
+
+        #title {
+            color: black;
+            font-family: 'Cormorant Garamond', serif;
+            text-align: left;
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 4%;
+        }
+
+        #menulist {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menuitem {
+            list-style-type: none;
+            list-style-position: inside;
+            border-top: 1px solid black;
+        }
+
+        #topics {
+            text-align: left;
+        }
+
+        .header {
+            background-color: white;
+            grid-area: header;
+            text-align: left;
+        }
+
+        .content {
+            background: white;
+            grid-area: content;
+            padding-top: 5%;
+            padding-left: 3%;
+        }
+
+        .content-header {
+            list-style-type: none;
+            text-align: justify;
+            font-family: 'Taviraj', serif;
+            text-align: left;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .content-brief {
+            font-family: 'Gentium Book Basic', serif;
+            text-align: left;
+            font-size: 26px;
+        }
+
+        .content-code {
+            display: block;
+            font-family: 'Source Code Pro', monospace;
+            text-align: left;
+            font-size: 25px;
+            background-color: lightgray;
+            color: green;
+            padding: 1%;
+            margin: 1%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        .footer {
+            background: white;
+            grid-area: footer;
+        }
+
+        #footer-info {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .container {
+            min-height: 300px;
+            width: 100%;
+            background: LightGray;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 50px auto 1fr auto;
+            grid-gap: 10px;
+            grid-template-areas:
+                "header"
+                "content"
+                "footer";
+        }
+
+        @media (min-width: 360px) {
+            .container {
+                grid-template-columns: auto 1fr;
+                grid-template-rows: auto 1fr auto;
+                grid-template-areas:
+                    "header header"
+                    "content content"
+                    "footer footer";
+            }
+        }
+
+        @media (min-width: 400px) {
+            .container {
+                grid-template-areas:
+                    "header content"
+                    "header content"
+                    "footer footer";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main id="main-doc">
+        <div class="container">
+            <nav id="navbar">
+                <header class="header">
+                    <img id="logo" src="https://i.pinimg.com/originals/91/94/c9/9194c978fa63798b2e882e6fda5eb953.png"
+                        alt="python logo">
+                    <h4 id="title">Python Documentation</h4>
+                    <ul id="menulist">
+                        <li class="menuitem"><a href="#Introduction" class="nav-link">Introduction</a></li>
+                        <li class="menuitem"><a href="#Data_Types" class="nav-link">Data Types</a></li>
+                        <li class="menuitem"><a href="#Operators" class="nav-link">Operators</a></li>
+                        <li class="menuitem"><a href="#Strings" class="nav-link">Strings</a></li>
+                        <li class="menuitem"><a href="#Booleans" class="nav-link">Booleans</a></li>
+                    </ul>
+                </header>
+            </nav>
+            <div class="content">
+                <section class="main-section" id="Introduction">
+                    <header class="content-header">Introduction</header>
+                    <p class="content-brief">Technically speaking it is an interpreted language thatdoes not have an
+                        intermediate
+                        compilation phase like a compiled language, for example C or Java.And like many interpreted
+                        languages, it is dynamically typed, which means that you do not have to indicatethe types of
+                        the variables you use, and variables arenot tied to a specific type.This has pros and cons.
+                        In particular we can mention that you write programs faster, but on the other handyou have
+                        less help from the tools to prevent possiblebugs and you will find out about some kinds of
+                        issuesonly by executing the program at runtime.Python supports a wide variety of
+                        differentprogramming paradigms, including proceduralprogramming, object oriented programming
+                        and functional programming. It's flexible enough to adapt to a lot of different needs.<br/>
+                    </p>
+                    <ul>
+                        <h4>There is a huge variety of scenarios that Python excels in.</h4>
+                        <li>Shell scripting</li>
+                        <li>Task automation</li>
+                        <li>Web development</li>
+                        are just some basic examples.
+                    </ul>
+                    <code class="content-code">name = "Hello World" <br/> print(name)</code>
+                    <p class="content-brief">A program is formed by a series of statements. Eachstatement is put on
+                        its own line, but you
+                        can use asemicolon to have more than one statement on asingle line:
+                        22name = "Roger"; print(name)
+
+                        In a Python program, everything after a hash mark isignored, and considered a comment:#this
+                        is a commented linename = "Roger"# this is an inline comment
+                    </p>
+
+                </section>
+                <section class="main-section" id="Data_Types">
+                    <header class="content-header">Data Types</header>
+                    <p class="content-brief">Python has several built-in types.If you create the name variable
+                        assigning it the
+                        value "Roger", automatically this variable is nowrepresenting a String data type.name =
+                        "Roger"You can check which type a variable is using thetype() function, passing the variable
+                        as anargument, and then comparing the result to str:name = "Roger"type(name) == str #TrueOr
+                        using isinstance():name = "Roger"isinstance(name, str) #True
+                        We used the str class here, but the same works forother data types.First, we have numbers.
+                        Integer numbers arerepresented using the int class. Floating pointnumbers (fractions) are of
+                        type float: <br />
+                    </p>
+                    <code
+                        class="content-code">age = 1 <br/> type(age) == int #True <br/>fraction = 0.1 <br/>type(fraction) == float #True</code>
+                    <p class="content-brief">Python automatically detects the type from the valuetype.You can also
+                        create a variable of a
+                        specific type byusing the class constructor, passing a value literal or avariable name<br />
+                        Those are just the basics of types. We have a lot moretypes in Python:complex for complex
+                        numbersbool for booleanslist for liststuple for tuplesrange for rangesdict for
+                        dictionariesset for setsand more!We'll explore them all soon
+                    </p>
+                    <ul>
+                        <h4>We have a lot more types in Python:</h4>
+                        <li>complex for complex numbers</li>
+                        <li>bool for booleans</li>
+                        <li>list for lists</li>
+                        <li>tuple for tuples</li>
+                        <li>range for ranges</li>
+                        <li>dict for dictionaries</li>
+                        <li>set for sets</li>
+                        and more! We'll explore them all soon.
+                    </ul>
+                </section>
+                <section class="main-section" id="Operators">
+                    <header class="content-header">Operators</header>
+                    <p class="content-brief">Python operators are symbols that we use to runoperations upon values
+                        and variables.We can
+                        divide operators based on the kind ofoperation they perform:assignment operatorarithmetic
+                        operators comparison operators logical operatorsbitwise operatorsplus some interesting ones
+                        like is and in.</p>
+                    <code
+                        class="content-code">print(0and1) ## 0 <br/> print(1and0) ## 0 <br/>print(Falseand'hey') ## False <br/>print('hi'and'hey') ## 'hey'<br/>print([] andFalse ) ## []<br/>print(Falseand [] ) ## False</code>
+                    <p class="content-brief">is is called the identity operator. It is used tocompare two objects
+                        and returns true if both
+                        are thesame object. More on objects later.in is called the membership operator. Is used
+                        totell if a value is contained in a list, or anothersequence. More on lists and other
+                        sequences later.</p>
+                </section>
+                <section class="main-section" id="Strings">
+                    <header class="content-header">Operators</header>
+                    <p class="content-brief">A string in Python is a series of characters enclosedinto quotes or
+                        double
+                        quotes:"Roger"'Roger'You can assign a string value to a variable:name = "Roger"<br />
+                        You can concatenate two strings using the +operator<br />
+                    </p>
+                    <code
+                        class="content-code">name = "Roger"<br/>name += " is a good dog"<br/>print(name) #Roger is a good dog</code>
+                    <p class="content-brief">A string has a set of built-in methods, like:isalpha() to check if a
+                        string contains
+                        onlycharacters and is not emptyisalnum() to check if a string containscharacters or digits
+                        and is not emptyisdecimal() to check if a string contains digitsand is not emptylower() to
+                        get a lowercase version of a stringislower() to check if a string is lowercaseupper() to get
+                        an uppercase version of a stringisupper() to check if a string is uppercasetitle() to get a
+                        capitalized version of a string<br />
+                        You can use some global functions to work withstrings, too.In particular I think of len(),
+                        which gives you thelength of a string:name = "Roger"print(len(name)) #5The in operator lets
+                        you check if a string contains asubstring:name = "Roger"print("ger"in name)<br />
+                    </p>
+                </section>
+                <section class="main-section" id="Booleans">
+                    <header class="content-header">Booleans</header>
+                    <p class="content-brief">Python provides the bool type, which can have twovalues: True and False
+                        (capitalized)done =
+                        Falsedone = TrueBooleans are especially useful with conditional controlstructures like if
+                        statements:done = Trueif done:# run some code hereelse:# run some other codeWhen evaluating
+                        a value for True or False, if thevalue is not a bool we have some rules dependingon the type
+                        we're checking<br />
+                        Or using isinstance(), passing 2 arguments: thevariable, and the bool class:done =
+                        Trueisinstance(done, bool) #TrueThe global any() function is also very useful whenworking
+                        with booleans, as it returns True if any of thevalues of the iterable (list, for example)
+                        passed asargument are True:book_1_read = Truebook_2_read = Falseread_any_book =
+                        any([book_1_read, book_2_read])The global all() function is same, but returns Trueif all of
+                        the values passed to it are True<br />
+
+                    </p>
+                    <code
+                        class="content-code">ingredients_purchased = True<br/>meal_cooked = False<br/>ready_to_serve = all([ingredients_purchased, meal_cooked])</code>
+                    <p class="content-brief">Or using isinstance(), passing 2 arguments: thevariable, and the bool
+                        class:done =
+                        Trueisinstance(done, bool) #TrueThe global any() function is also very useful whenworking
+                        with booleans, as it returns True if any of thevalues of the iterable (list, for example)
+                        passed asargument are True:book_1_read = Truebook_2_read = False<br />
+                        The global all() function is same, but returns Trueif all of the values passed to it are
+                        True<br />
+                    </p>
+                </section>
+            </div>
+            <div class="footer">
+                <p id="footer-info">Disclaimer: For demo purpose only. Not accurate by any means</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
